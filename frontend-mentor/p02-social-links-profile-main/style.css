@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-1: hsl(0, 0%, 20%); /* Grey 700 */
+    --color-2: hsl(0, 0%, 12%); /* Grey 800 */
+    --color-3: hsl(0, 0%, 8%); /* Grey 900 */
+    --color-4: hsl(0, 0%, 100%); /* White */
+    --color-5: hsl(75, 94%, 57%); /* Green */
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter";
+    background-color: var(--color-3);
+    color: var(--color-4);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-4);
+}
+
+.social-links-wrapper {
+    background-color: var(--color-2);
+    padding: 2.5rem;
+    border-radius: 1rem;
+}
+
+.details-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-wrapper {
+    border-radius: 50%;
+    width: 120px;
+    margin-bottom: 32px;
+}
+
+.name {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: var(--color-5);
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.description {
+    margin-bottom: 14px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* links */
+
+.links-wapper div {
+    background-color: var(--color-1);
+    width: 100%;
+    padding: 12px;
+    margin: 18px 0;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media not (hover: none) {
+    .links-wapper div:hover {
+        background-color: hsl(0, 0%, 38%);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 500px) {
+    .social-links-wrapper {
+        width: 90%;
+    }
+    .name {
+        font-size: 28px;
+    }
+    .location {
+        font-size: 16px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .links-wapper div {
+        font-size: 16px;
+    }
+}

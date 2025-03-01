@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-1: hsl(47, 88%, 63%);
+    --color-2: hsl(0, 0%, 100%);
+    --color-3: hsl(0, 0%, 42%); /* gray 500 */
+    --color-4: hsl(0, 0%, 7%); /* gray 950 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    background-color: var(--color-1);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    background-color: var(--color-2);
+    padding: 22px;
+    border: solid var(--color-4) 1px;
+    border-radius: 1.5rem;
+    box-shadow: 10px 10px var(--color-4);
+}
+
+.card-image img {
+    border-radius: 1.5rem;
+    margin-bottom: 18px;
+}
+
+.card-tags {
+    background-color: var(--color-1);
+    padding: 4px 12px;
+    font-weight: 800;
+    display: inline;
+    border-radius: 0.5rem;
+}
+
+.card-published {
+    margin: 18px 0;
+}
+
+.card-contents h1 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.card-contents p {
+    margin-bottom: 18px;
+    color: var(--color-3);
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-author img {
+    height: 32px;
+}
+
+.card-author p {
+    font-weight: 800;
+    margin-top: 16px;
+    color: var(--color-4);
+}
+
+@media not (hover: none) {
+    .card-author:hover {
+        cursor: pointer;
+    }
+    
+    .card-tags:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+
+    .card-image img {
+        width: 290px;
+    }
+
+    .card-contents h1 {
+        font-size: 22px;
+    }
+}

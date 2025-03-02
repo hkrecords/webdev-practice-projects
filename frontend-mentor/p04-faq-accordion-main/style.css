@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-1: hsl(0, 0%, 100%); /* White */
+    --color-2: hsl(275, 100%, 97%); /* light pink */
+    --color-3: hsl(292, 16%, 49%); /* grayish purple */
+    --color-4: hsl(292, 42%, 14%); /* dark purple */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--color-2);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.background-pattern-desktop, .background-pattern-mobile {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+
+.faq-wrapper {
+    background-color: var(--color-1);
+    width: 600px;
+    padding: 32px;
+    border-radius: 1rem;
+    margin: 120px 0;
+}
+
+.faq-main-heading {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+.faq-main-heading h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--color-4);
+}
+
+.faq-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.faq-heading h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-4);
+    cursor: pointer;
+}
+
+.faq-heading img {
+    cursor: pointer;
+}
+
+.faq-explaination {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.faq-explaination.show {
+    max-height: 200px;
+}
+
+.faq-explaination p {
+    color: var(--color-3);
+}
+
+.horizontal-line {
+    height: 1px;
+    background-color: var(--color-2);
+    margin: 36px 0;
+    border: none;
+}
+
+
+@media (max-width: 501px) {
+    .background-pattern-desktop {
+        display: none;
+    }
+}
+@media (min-width: 500px) {
+    .background-pattern-mobile {
+        display: none;
+    }
+}
+
+@media not (hover: none) {
+    .faq-heading h2:hover {
+        color: #AD28EB;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+    .faq-wrapper {
+        width: 350px;
+    }
+    .faq-main-heading h1 {
+        font-size: 32px;
+    }
+    .faq-heading h2 {
+        font-size: 16px;
+    }
+}

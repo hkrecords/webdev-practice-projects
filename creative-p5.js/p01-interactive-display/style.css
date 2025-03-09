@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  background-color: #1F1F1F;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: #ebe5e5;
+  display: flex;
+  justify-content: center ;
+}

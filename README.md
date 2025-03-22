@@ -6,7 +6,7 @@ This repository hosts a collection of my practice projects and challenges that I
 - HTML
 - CSS
 - JavaScript
-- p5.js (javascript library for creative coding)
+- p5.js *(javascript library for creative coding)*
 
 ### Fonts
 - **Poppins**: 
